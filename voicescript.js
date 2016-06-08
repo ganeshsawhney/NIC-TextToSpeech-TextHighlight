@@ -22,6 +22,12 @@ $(document).ready(function() {
 
 				responsiveVoice.speak(gtr, "Hindi Female");
 				$('#test').html($('#test').html()+spans[t-1].split('\n\n').join('<br><br>')+' । ');
+
+				$('#test1').html('');
+				for (var cnt = t; cnt < spans.length; cnt++)
+				{
+					$('#test1').html($('#test1').html()+spans[cnt].split('\n\n').join('<br><br>')+' । ');
+				}
 			}
 
 			if($("#radio-option-1").is(':checked')==false)
