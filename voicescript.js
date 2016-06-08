@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 		$("#radio-option-2").click(function()
 	{
+		responsiveVoice.cancel();
 		t=0;
 		$('#test').html('');
 		$('#test1').html('');
