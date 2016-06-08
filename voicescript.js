@@ -1,16 +1,26 @@
 $(document).ready(function() {
-	$("#radio-option-1").click(function()
-	{
-		if($("#radio-option-1").is(':checked'))
-		{
-			$('#test').html('');
-		}
 
 		var str = $('.WordSection1').text();
 		var spans = str.split('।');
 
 		var gtr="";
 		var t=0;
+
+		$("#radio-option-2").click(function()
+	{
+		t=0;
+		$('#test').html('');
+		$('#test1').html('');
+				for (var cnt = t; cnt < spans.length; cnt++)
+				{
+					$('#test1').html($('#test1').html()+spans[cnt].split('\n\n').join('<br><br>')+' । ');
+				}
+	});
+
+	$("#radio-option-1").click(function()
+	{
+	
+
 
 		var refreshIntervalId = setInterval(function(){
 
